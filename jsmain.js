@@ -1,10 +1,36 @@
+$(document).ready(function () {
+  var a=0;
+
+  $(".post1 .imgHolder ").each(function (index) {
+    a=0;
+    $(this).children("div").each(function (index) {
+      a+=1;
+      $(this).prepend("<span>"+a+"</span>");
+    });
+   
+  });
+
+
+});
+
+$(document).click(function (event) {
+  if (!$(event.target).closest(".shareIcon").length) {
+    $("body").find(".shareList").removeClass("active");
+  }
+});
+
+
 $(".refresher").click(function () {
   $(this).children('i').toggleClass('spinner');
 });
 
+
+$(".post1 .share .shareIcon").click(function () {
+  $(this).children('.shareList').toggleClass('active');
+});
+
 $(".showRest").click(function () {
-  // $(this).parent().children('p').children('dots').toggleClass('spinner');
-  var a=$(this).parent().children('p').children('.dots').css("display");
+  var a = $(this).parent().children('p').children('.dots').css("display");
 
   if (a == "none") {
     $(this).parent().children('p').children('.dots').css("display", "inline");
@@ -13,26 +39,39 @@ $(".showRest").click(function () {
     console.log(a);
   } else {
     $(this).parent().children('p').children('.dots').css("display", "none");
-    $(this).html('gizlət <i class="fa-solid fa-angles-up"></i>');
+    $(this).html('gizlət  <i class="fa-solid fa-angles-up"></i>');
     $(this).parent().children('p').children('.more').css("display", "inline");
-    // dots.style.display = "inline";
-    // console.log('contra');
-    console.log(a+'`else`');
+
+    console.log(a + '`else`');
   }
 });
 
-function myFunction() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
 
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = 'ardını oxu <i class="fa-solid fa-angles-down"></i>';
-    moreText.style.display = "none";
+$(".post1 .icons a").click(function () {
+  $(this).toggleClass('active');
+  var a = $(this).children('span').text();
+  if ($(this).hasClass('active')) {
+    $(this).children('span').html(parseInt(a) + 1)
   } else {
-    dots.style.display = "none";
-    btnText.innerHTML = 'gizlət <i class="fa-solid fa-angles-up"></i>';
-    moreText.style.display = "inline";
+    $(this).children('span').html(parseInt(a) - 1)
   }
-}
+
+});
+
+
+
+// esas shekli goesteren 
+
+$(".post1 .imgHolder div").click(function () {
+  var a = $(this).children("img").attr("src");
+
+  $(this).siblings('.w-100').css("display", "block");
+  $(this).siblings('.w-100').attr("src", a);
+
+  $(this).siblings('.w-100').attr("src", a);
+  $(this).siblings().removeClass("active");
+
+  $(this).addClass("active");
+
+
+});
