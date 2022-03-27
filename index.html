@@ -10,13 +10,11 @@
     <link href="cssmain.css" rel="stylesheet" />
     <link href="csstotal.css" rel="stylesheet" />
     <link href="cssfonts.css" rel="stylesheet" />
-
+    <link rel="stylesheet" href="cssmediaq.css">
 
     <link rel="stylesheet" href="csv/all.min.css">
     <link rel="stylesheet" href="csv/fontawesome.min.css">
-    <style>
-        /* @import url('https://fonts.googleapis.com/css2?family=Exo:wght@700&display=swap'); */
-    </style>
+
 </head>
 
 <body>
@@ -24,7 +22,19 @@
 
     <nav сlass="container">
 
-        <section id="blackNav"></section>
+        <section id="blackNav" class="container">
+            <form class="blackForm" action="action_page.php">
+                <div >
+                    <ul class="suggestions">
+                        <li><a href="#">Ahgdam</a></li>
+                        <li><a href="#">Ahgdaws</a></li>
+                        <li><a href="#">Baky</a></li>
+                    </ul>
+                    <input  class="w-30" type="text" placeholder="Axtar.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+            </form>
+        </section>
 
         <section id="mainNav" class="container  dflex">
             <a href="#">
@@ -32,10 +42,14 @@
             </a>
 
             <div class="mainTabs">
+                <a id="navClose"> <i class="fa-solid fa-bars"> </i> bağla</a>
+
                 <a href="#">Hesab jarat</a>
                 <a href="#">Daxil ol</a>
                 <a class="postTab" href="#">Post paylaş</a>
             </div>
+            <a id="navOpen"><i class="fa-solid fa-bars"></i></a>
+
         </section>
 
     </nav>
@@ -48,7 +62,7 @@
                         yenilə <i class="fa-solid fa-arrows-rotate"></i>
                     </button>
                     <ul>
-                        <li><a href="#">birinci qarabağ müharibəsi (12)</a></li>
+                        <li><a href="#">birinci qarabağ müharibəsi (12) </a></li>
 
                         <li>
                             <a href="#">azərbaycan hhq (3)</a>
@@ -66,7 +80,7 @@
 
                 <div class="w-100 second">
                     <h3 style="display: block;">Ən çox oxunanlar</h3>
-                  
+
                     <ul>
                         <li><a href="#">birinci qarabağ müharibəsi (12)</a></li>
 

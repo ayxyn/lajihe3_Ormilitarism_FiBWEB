@@ -1,13 +1,13 @@
 $(document).ready(function () {
-  var a=0;
+  var a = 0;
 
   $(".post1 .imgHolder ").each(function (index) {
-    a=0;
+    a = 0;
     $(this).children("div").each(function (index) {
-      a+=1;
-      $(this).prepend("<span>"+a+"</span>");
+      a += 1;
+      $(this).prepend("<span>" + a + "</span>");
     });
-   
+
   });
 
 
@@ -74,4 +74,15 @@ $(".post1 .imgHolder div").click(function () {
   $(this).addClass("active");
 
 
+});
+
+// navbar awcycy
+$("#navOpen").click(function () {
+
+  $("#mainNav .mainTabs").addClass("active");
+});
+
+$("#navClose").click(function () {
+
+  $("#mainNav .mainTabs").removeClass("active");
 });

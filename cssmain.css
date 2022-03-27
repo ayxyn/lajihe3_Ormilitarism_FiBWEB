@@ -1,5 +1,5 @@
 #topReklam {
-    background-color: goldenrod;
+    background-color: rgb(218, 60, 32);
     height: 6.5rem;
 
 }
@@ -9,20 +9,86 @@ nav {
     top: 0;
     z-index: 10;
     width: 100%;
+    overflow: hidden;
 }
 
 #blackNav {
-    background-color: rgb(223, 223, 223);
-    height: 2rem;
+    background-color: #25333f;
+
+}
+
+
+#blackNav form {
+    padding: .3rem 0;
+}
+
+#blackNav form>div {
+    display: flex;
+
+}
+
+#blackNav form input[type=text] {
+    padding: .3rem;
+    font-size: 17px;
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+
+    border: .1rem solid #00ACAA;
+    background: #f1f1f1;
+    display: inline-block;
+    margin: 0;
+    font-size: .8rem;
+    outline: 0;
+}
+
+#blackNav form button {
+    padding: .3rem .5rem;
+    display: inline-block;
+    border: .1px solid #00ACAA;
+
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+
+    background: #00ACAA;
+    color: white;
+    font-size: .85rem;
+    border: 0;
+    border-left: none;
+    cursor: pointer;
 }
 
 #mainNav {
     background-color: #496075;
     -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 0px 15px 5px rgba(0, 0, 0, 0);
     box-shadow: 0px 10px 13px -7px #000000, 0px 0px 15px 5px rgba(0, 0, 0, 0);
-
     justify-content: space-between;
     align-items: center;
+
+    position: relative;
+
+}
+
+
+#navClose,
+#navClose i {
+    /* cursor: pointer; */
+    visibility: hidden;
+    color: #DFDFDF;
+}
+
+#navOpen,
+#navOpen i {
+    cursor: pointer;
+    color: #DFDFDF;
+    display: none;
+    position: absolute;
+    right: 1.5rem;
+    top: .3rem;
+
+}
+
+#navOpen:hover {
+    background-color: #40505e;
 }
 
 #mainNav a {
@@ -34,10 +100,7 @@ nav {
     padding: .4rem .4rem;
 }
 
-#mainNav .mainTabs {
-    /* padding: .8rem; */
 
-}
 
 #mainNav .mainTabs a {
     border-radius: .25rem;
@@ -53,11 +116,12 @@ nav {
 }
 
 #mainNav .mainTabs a.postTab {
-    background-color: #00D672;
+    background-color: #DFDFDF;
+    color: #40505e;
 }
 
 #mainNav .mainTabs a.postTab:hover {
-    background-color: #00a759;
+    background-color: #a3a1a1;
 }
 
 #indexContent {
@@ -83,8 +147,7 @@ nav {
 
 #contentInner .left {
     height: 50%;
-    /* padding-right: .8rem; */
-    background-color: #DFDFDF;
+    background-color: #FFECCC;
 
 }
 
@@ -97,10 +160,8 @@ nav {
 }
 
 #contentInner .left>.second {
-    /* background-color: #a5d2fd; */
-    border-top: .4rem solid #00D672;
+    border-top: .4rem solid #E59C23;
     padding-top: 1rem;
-    /* height: 100%; */
 }
 
 #contentInner .left>div>* {
@@ -134,7 +195,7 @@ nav {
 }
 
 #contentInner .left ul li a:hover {
-    color: #0e8658;
+    color: #25333F;
     background-color: #F6F7F7;
     padding-right: 0;
     padding-left: 1rem;
@@ -146,7 +207,7 @@ nav {
     position: absolute;
     width: 0%;
     height: 3px;
-    background-color: #00a759;
+    background-color: #E59C23;
     top: 100%;
     left: 0;
 }
