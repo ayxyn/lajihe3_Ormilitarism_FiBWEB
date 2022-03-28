@@ -1,25 +1,52 @@
 $(document).ready(function () {
+  // shekilleri noemreleme
   var a = 0;
-
   $(".post1 .imgHolder ").each(function (index) {
     a = 0;
     $(this).children("div").each(function (index) {
       a += 1;
       $(this).prepend("<span>" + a + "</span>");
     });
-
   });
+
+  //maks uzunluq qysytlajycy
+  var maxLength = 300;
+  $("#contentInner .post1 .inner p").each(function(){
+    var myStr = $(this).text();
+    console.log(myStr);
+    if($.trim(myStr).length > maxLength){
+      var newStr = myStr.substring(0, maxLength);
+      var removedStr = myStr.substring(maxLength, $.trim(myStr).length);
+      $(this).empty().html(newStr); 
+      $(this).append('<span class="dots">...</span>');
+      $(this).append('<span class="more">'+removedStr+'</span>');
+    };
+
+
+  
+  })
+
 
 
 });
 
+
+// bawsqa jeere tyklajanda bahglamaq (shikajet)
 $(document).click(function (event) {
   if (!$(event.target).closest(".shareIcon").length) {
     $("body").find(".shareList").removeClass("active");
   }
 });
 
+// bawsqa jeere tyklajanda bahglamaq (axtaryws)
+$(document).click(function (event) {
+  if (!$(event.target).closest(".blackForm").length) {
+    $("body").find(".suggestions").removeClass("active");
+  }
+});
 
+
+//moevzular jeenile
 $(".refresher").click(function () {
   $(this).children('i').toggleClass('spinner');
 });
@@ -28,6 +55,7 @@ $(".refresher").click(function () {
 $(".post1 .share .shareIcon").click(function () {
   $(this).children('.shareList').toggleClass('active');
 });
+
 
 $(".showRest").click(function () {
   var a = $(this).parent().children('p').children('.dots').css("display");

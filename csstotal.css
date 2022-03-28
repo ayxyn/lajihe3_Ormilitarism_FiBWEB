@@ -78,6 +78,14 @@ li {
     width: 33%;
 }
 
+.w-34 {
+    width: 34%;
+}
+
+.w-35 {
+    width: 35%;
+}
+
 .w-40 {
     width: 40%;
 }
@@ -95,10 +103,21 @@ li {
     width: 75%;
 }
 
+.w-80 {
+    width: 80%;
+}
+
+.w-90 {
+    width: 90%;
+}
+
 .w-100 {
     width: 100%;
 }
 
+.m20{
+    padding: 1rem;
+}
 
 body {
     background-color: #b30000;
@@ -142,19 +161,32 @@ button {
 
 
 .btnPaper:hover {
-    background-color: #00a759;
+    background-color: #00AB9A;
 }
 
-.btnPaper img {
-    height: 1rem;
-    vertical-align: -.25rem;
-    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(201deg) brightness(103%) contrast(101%);
-}
 
 .btnPaper .spinner {
 
     animation: spinnerAnim 2.5s linear infinite;
 
+}
+
+.btnTopics {
+    display: inline-block;
+    padding: .3rem .6rem;
+    white-space: nowrap;
+    text-align: center;
+    color: whitesmoke;
+    background-color: #E59C23;
+    cursor: pointer;
+    font-size: .9rem;
+    border-radius: 0.25rem;
+    font-family: 'Exo', sans-serif;
+
+}
+
+.btnTopics:hover {
+    background-color: #00AB9A;
 }
 
 .exo {
@@ -181,7 +213,6 @@ button {
 
 .post1 .inner {
     border-radius: 0.25rem;
-    /* padding: 1rem; */
     padding-left: 0;
 }
 
@@ -388,20 +419,74 @@ button {
     background-color: #E59C23;
     text-align: center;
     font-family: 'Exo', sans-serif;
-    padding-top: .2rem;    font-size: .75rem;
-
+    padding-top: .2rem;
+    font-size: .75rem;
+    border-radius: .25rem;
 
 }
 
 .post1 .imgHolder>div.active {
     height: auto;
     object-fit: cover;
-    padding: .3rem;
+    padding: .6rem;
     background-color: #FFECCC;
-    border-bottom-right-radius: 1rem;
 }
 
 .post1 .imgHolder .w-100 {
     display: none;
-    /* rgb(73, 96, 117); */
+}
+
+
+/* sewcim qutusu tertibaty: */
+.select {
+    display: inline-block;
+    position: relative;
+}
+
+.select select,.afterSelect {
+    padding: .3rem .5rem;
+    font-size: .7rem;
+    color: #fff;
+    background-color: #E59C23;
+    border: 1px solid #dddddd;
+    cursor: pointer;
+    border-radius: .25rem;
+    padding-right: 2rem;
+    /* replace default;*/
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.afterSelect{
+    display: inline-block;
+    padding: .2rem .5rem;
+    outline: 0;
+    /* border-radius: 0.25rem; */
+    font-family: 'Exo', sans-serif;
+}
+
+.select i {
+    font-size: .7rem;
+    position: absolute;
+    top: .55rem;
+    left:calc(100% - 1rem);
+    color: #fff;    pointer-events: none;
+
+}
+
+.select select:hover,
+.select:focus {
+    outline: none;
+    border: 1px solid #bbbbbb;
+}
+
+.select select option {
+    background-color: #FFECCC;
+    color: #464646;
+}
+
+.newPost{
+    padding: 1rem;
+    background-color: #00ACAA;
 }
