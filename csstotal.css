@@ -115,7 +115,7 @@ li {
     width: 100%;
 }
 
-.m20{
+.m20 {
     padding: 1rem;
 }
 
@@ -443,7 +443,8 @@ button {
     position: relative;
 }
 
-.select select,.afterSelect {
+.select select,
+.afterSelect {
     padding: .3rem .5rem;
     font-size: .7rem;
     color: #fff;
@@ -452,17 +453,15 @@ button {
     cursor: pointer;
     border-radius: .25rem;
     padding-right: 2rem;
-    /* replace default;*/
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
 }
 
-.afterSelect{
+.afterSelect {
     display: inline-block;
     padding: .2rem .5rem;
     outline: 0;
-    /* border-radius: 0.25rem; */
     font-family: 'Exo', sans-serif;
 }
 
@@ -470,8 +469,9 @@ button {
     font-size: .7rem;
     position: absolute;
     top: .55rem;
-    left:calc(100% - 1rem);
-    color: #fff;    pointer-events: none;
+    left: calc(100% - 1rem);
+    color: #fff;
+    pointer-events: none;
 
 }
 
@@ -486,7 +486,51 @@ button {
     color: #464646;
 }
 
-.newPost{
+.newPost {
     padding: 1rem;
     background-color: #00ACAA;
+}
+
+.newPost input[type="submit"] {
+    border: 0;
+    background-color: #E59C23;
+    font-size: 1rem;
+    color: #fff;
+    padding: .4rem 1rem;
+    margin: 1rem 0;
+}
+
+.newPost input[type="submit"]:hover {
+    background-color: #fff;
+    color: #496075;
+}
+
+.newPost textarea {
+    padding: .7rem;
+    border: 0;
+    border-radius: .2rem;
+    border: 1px solid gray;
+    margin: 1rem 0;
+}
+
+.newPost textarea:focus,
+.newPost textarea:active {
+    outline: 0;
+
+}
+
+.btnLight {
+    font-weight: 600;
+    padding: .5rem .4rem;
+    border-radius: .25rem;
+    cursor: pointer;
+    display: inline-block;
+
+    background-color: #fff;
+    color: #496075;
+}
+
+.btnLight:hover {
+    background-color: #dfdfdf;
+
 }

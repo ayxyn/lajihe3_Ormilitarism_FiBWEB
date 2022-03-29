@@ -11,19 +11,19 @@ $(document).ready(function () {
 
   //maks uzunluq qysytlajycy
   var maxLength = 300;
-  $("#contentInner .post1 .inner p").each(function(){
+  $("#contentInner .post1 .inner p").each(function () {
     var myStr = $(this).text();
     console.log(myStr);
-    if($.trim(myStr).length > maxLength){
+    if ($.trim(myStr).length > maxLength) {
       var newStr = myStr.substring(0, maxLength);
       var removedStr = myStr.substring(maxLength, $.trim(myStr).length);
-      $(this).empty().html(newStr); 
+      $(this).empty().html(newStr);
       $(this).append('<span class="dots">...</span>');
-      $(this).append('<span class="more">'+removedStr+'</span>');
+      $(this).append('<span class="more">' + removedStr + '</span>');
     };
 
 
-  
+
   })
 
 
@@ -75,6 +75,7 @@ $(".showRest").click(function () {
 });
 
 
+// bejenme duejmesi
 $(".post1 .icons a").click(function () {
   $(this).toggleClass('active');
   var a = $(this).children('span').text();
@@ -89,7 +90,6 @@ $(".post1 .icons a").click(function () {
 
 
 // esas shekli goesteren 
-
 $(".post1 .imgHolder div").click(function () {
   var a = $(this).children("img").attr("src");
 
@@ -113,4 +113,28 @@ $("#navOpen").click(function () {
 $("#navClose").click(function () {
 
   $("#mainNav .mainTabs").removeClass("active");
+});
+
+
+//link jeerlewsdirmek uewcun hisseler:
+$(".alertTag").click(function () {
+
+  let topic = prompt("Keçid veriləcək mövzu adını qeyd edin:", "cobra");
+  if (topic != null) {
+
+
+    $('#postTexter').val($('#postTexter').val() + " (bax: " + topic + ")");
+  } 
+});
+
+$(".alertLink").click(function () {
+
+  let link = prompt("Keçidi yapışdırın:", "");
+  let linkName=prompt("Keçid adı:", "");
+
+  if ((link != null)&&(linkName != null)) {
+
+
+    $('#postTexter').val($('#postTexter').val() + "["+link+" "+linkName+"]");
+  }  
 });
