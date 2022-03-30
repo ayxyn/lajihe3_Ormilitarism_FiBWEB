@@ -72,7 +72,7 @@ nav {
     padding-bottom: .7rem;
     border: 2px solid gray;
     display: none;
-    border-bottom: .7rem solid #00ACAA;
+    border-bottom: .7rem solid #E59C23;
 
 }
 
@@ -172,7 +172,7 @@ nav {
 
 #contentInner .left,
 #contentInner .right {
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
     /* padding-bottom: 1rem; */
 
 
@@ -351,4 +351,10 @@ footer .second {
 
 #moreTopics a span {
     display: inline-block;
+}
+
+
+.profileArea{
+    background-color: #C3FCF2;
+    padding: 1rem;
 }

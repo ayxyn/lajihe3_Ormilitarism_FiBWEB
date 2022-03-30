@@ -115,8 +115,43 @@ li {
     width: 100%;
 }
 
+.ws-25 {
+    width: 25%;
+}
+
+.ws-30 {
+    width: 30%;
+}
+
+.ws-50 {
+    width: 50%;
+}
+
+.ws-70 {
+    width: 70%;
+}
+
+.ws-75 {
+    width: 75%;
+}
+
+
+
 .m20 {
-    padding: 1rem;
+    margin: 1rem;
+}
+
+.my20 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.mb20 {
+    margin-bottom: 1rem;
+}
+
+.mb30 {
+    margin-bottom: 1.5rem;
 }
 
 body {
@@ -486,12 +521,12 @@ button {
     color: #464646;
 }
 
-.newPost {
+.newForm {
     padding: 1rem;
     background-color: #00ACAA;
 }
 
-.newPost input[type="submit"] {
+.newForm input[type="submit"] {
     border: 0;
     background-color: #E59C23;
     font-size: 1rem;
@@ -500,12 +535,12 @@ button {
     margin: 1rem 0;
 }
 
-.newPost input[type="submit"]:hover {
+.newForm input[type="submit"]:hover {
     background-color: #fff;
     color: #496075;
 }
 
-.newPost textarea {
+.newForm textarea {
     padding: .7rem;
     border: 0;
     border-radius: .2rem;
@@ -513,8 +548,8 @@ button {
     margin: 1rem 0;
 }
 
-.newPost textarea:focus,
-.newPost textarea:active {
+.newForm textarea:focus,
+.newForm textarea:active {
     outline: 0;
 
 }
@@ -526,11 +561,46 @@ button {
     cursor: pointer;
     display: inline-block;
 
-    background-color: #fff;
-    color: #496075;
+    background-color: #E59C23;
+    color: #fff;
 }
 
 .btnLight:hover {
     background-color: #dfdfdf;
+    color: #00ACAA;
+}
 
+
+.newForm input[type="text"],
+.newForm input[type="password"] {
+    padding: .7rem;
+    border: 0;
+    border-radius: .2rem;
+    border: 1px solid gray;
+    margin: .7rem 0;
+}
+
+.newForm input[type="text"]:focus,
+.newForm input[type="password"] {
+    outline: 0;
+}
+
+.newForm label {
+    display: block;
+    color: #fff;
+    font-size: .65rem;
+}
+
+.newForm label i {
+    font-size: .8rem;
+    vertical-align: -.1rem;
+}
+
+.newForm h5 {
+    color: #fff;
+}
+
+.newForm .remember span {
+    color: #fff;
+    font-size: .8rem;
 }
