@@ -604,3 +604,31 @@ button {
     color: #fff;
     font-size: .8rem;
 }
+
+.btnIce{
+    font-size: .8rem;
+    background-color: #fff;
+    color: #00ACAA;
+    font-weight: 600;
+    padding: .2rem .6rem;
+    display: inline-block;
+    border: 2px solid #00AB9A;
+    border-radius: .25rem;
+}
+
+.btnIce:hover{
+    background-color: #dddddd;
+}
+
+.sorters{
+    font-size: .8rem;
+}
+
+.sorters a{
+    color: #E59C23;
+    font-weight: 600;
+}
+
+.sorters a:hover{
+    text-decoration: underline;
+}
